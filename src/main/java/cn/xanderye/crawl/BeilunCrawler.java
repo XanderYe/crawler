@@ -23,7 +23,7 @@ public class BeilunCrawler extends AbstractCrawler {
         String url = "http://www.bl.gov.cn/module/xxgk/search.jsp?divid=div1229055237&jdid=3499&area=113302060029545102&infotypeId=BL17&isAllList=1&standardXxgk=1";
         Document doc = Jsoup.connect(url).userAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36").get();
         Elements links = doc.select("body > table > tbody > tr > td > div.zfxxgk_item > div > ul > li > a");
-        List<RecruitData> recruitDataList = new ArrayList();
+        List<RecruitData> recruitDataList = new ArrayList<>();
         for (Element link : links)
         {
             RecruitData recruitData = new RecruitData();
